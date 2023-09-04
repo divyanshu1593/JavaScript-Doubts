@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doubt</title>
+</head>
+<body>
+    <script>
+        var func = function(){
+            console.log('inside func');
+        }
+
+        console.log(globalThis.func);
+
+        /*
+        according to javascript.info (refer to screenshot) globalThis.funcshould be undifined
+
+        but here it is printing the value of the function. Why?
+        */
+    </script>
+</body>
+</html>
