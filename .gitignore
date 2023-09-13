@@ -1,3 +1,8 @@
 # ignore test files
 test.js
 test.html
+
+# ignoring node modules and package.json files because they are just for testing
+node_modules
+package-lock.json
+package.json
