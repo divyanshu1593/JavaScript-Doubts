@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+</head>
+<body>
+    <script>
+        // In the following listener the passive option is true, so the expected behavoiur is that the default behaviour shuld happen first
+        // but here the alert is showing before the context menu is shown
+        document.addEventListener('contextmenu', function (event){
+            alert('this alert should happen after the default behaviour');
+        }, {
+            passive: true
+        });
+    </script>
+</body>
+</html>
