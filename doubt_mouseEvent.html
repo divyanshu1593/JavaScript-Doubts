@@ -33,6 +33,9 @@
     <script>
         // why does the events on parent div are not getting triggered?
 
+        // solution: it was a naming conflict. we should always use getElementById() to avoid such conflicts
+        let parent = document.getElementById('parent');
+
         parent.addEventListener('mouseenter', () => {
             console.log('Parent: mouseenter');
         });
