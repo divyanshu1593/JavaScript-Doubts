@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <style>
+        div{
+            padding: 100px;
+            border: 1px solid black;
+        }
+
+        #parent{
+            background-color: red;
+        }
+
+        #child{
+            background-color: blue;
+        }
+
+        #grandchild{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        Parent
+        <div id="child">Child
+            <div id="grandchild">Grandchild</div>
+        </div>
+    </div>
+    <script>
+        // why does the events on parent div are not getting triggered?
+
+        parent.addEventListener('mouseenter', () => {
+            console.log('Parent: mouseenter');
+        });
+
+        parent.addEventListener('mouseleave', () => {
+            console.log('Parent: mouseleave');
+        });
+
+        child.addEventListener('mouseenter', () => {
+            console.log('Child: mouseenter');
+        });
+
+        child.addEventListener('mouseleave', () => {
+            console.log('Child: mouseleave');
+        });
+
+        grandchild.addEventListener('mouseenter', () => {
+            console.log('Grandchild: mouseenter');
+        });
+
+        grandchild.addEventListener('mouseleave', () => {
+            console.log('Grangchild: mouseleave');
+        });
+    </script>
+</body>
+</html>
